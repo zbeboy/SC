@@ -1,0 +1,13 @@
+server:
+  port: 9301 # 服务端口
+
+spring:
+  application:
+    name: eureka-server # 服务名
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9300/eureka/
+  instance:
+    hostname: localhost

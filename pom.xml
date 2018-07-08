@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>top.zbeboy.sc</groupId>
+    <artifactId>SC</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>SC Parent project</name>
+    <packaging>pom</packaging>
+    <url>https://www.zbeboy.top</url>
+    <organization>
+        <name>ISY Team</name>
+        <url>https://www.zbeboy.top</url>
+    </organization>
+
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>user-server1</module>
+        <module>user-server2</module>
+        <module>sso-server1</module>
+        <module>sso-server2</module>
+        <module>eureka-server1</module>
+        <module>eureka-server2</module>
+        <module>api-server1</module>
+        <module>api-server2</module>
+    </modules>
+
+
+</project>

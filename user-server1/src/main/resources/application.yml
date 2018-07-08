@@ -1,0 +1,23 @@
+server:
+  port: 9200 # 服务端口
+
+spring:
+  application:
+    name: user-server # 服务名
+  jooq:
+    sql-dialect: mysql_8_0
+  datasource:
+    url: jdbc:mysql://localhost/sc?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  data:
+    rest:
+      base-path: /user
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9300/eureka/,http://localhost:9301/eureka/
+  instance:
+    hostname: localhost
